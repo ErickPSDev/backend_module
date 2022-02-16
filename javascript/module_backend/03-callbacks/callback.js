@@ -6,7 +6,7 @@ construir, aplanar y pintar un muro
 3 - pintar el muro
 
 */
-/*
+
 const muro = {
     estaConstruido: false,
     estaAplanado: false,
@@ -27,6 +27,7 @@ function pintar (muroAPintar){
     muroAPintar.estaPintado = true
     return muroAPintar
 }
+
 // llamar las funciones
 
 const muroConstruido = construir(muro)
@@ -62,7 +63,7 @@ Proceso inscripción a Kodemia
 4.Asistir a clases
 */
 
-
+// se inicializan los valores de la constante koder, en false.
 const koder = {
     entrevistado: false,
     oferta: false,
@@ -70,7 +71,7 @@ const koder = {
     asistencia: false
 }
 //DECLARACIÓN DE FUNCIONES
-
+/*
 function entrevista (tomarLaEntrevista){
     tomarLaEntrevista.entrevistado = true
     return tomarLaEntrevista
@@ -90,8 +91,8 @@ function asistir (asistirAClases){
     asistirAClases.asistencia = true
     return asistirAClases
 }
-
-//LLAMANDO FUNCIONES
+*/
+/*//LLAMANDO FUNCIONES
 const koderEntrevistado = entrevista(koder)
 console.log('koder Entrevistado: ', koderEntrevistado)
 
@@ -103,3 +104,48 @@ console.log('Koder inscrito: ',KoderInscrito )
 
 const koderAsistiendo = asistir (KoderInscrito)
 console.log('El Koder esta asistiendo: ', koderAsistiendo)
+*/
+// Convertir sincrona en asincrona
+
+//Declaración de función
+function tomarEntrevista (koderAEntrevistar, callback) {
+    setTimeout ( () => {
+        let error = null
+        koderAEntrevistar.entrevistado = true
+        if (koderAEntrevistar.entrevistado === false){
+            error = "No se pudo entrevistar"
+        }
+        callback(error, koderAEntrevistar)
+    }, 3500)
+}
+
+function recibirOferta (koderRecibeOferta, callback){
+    setTimeout ( () => {
+        let error = null
+        koderRecibeOferta.oferta = true
+        if (koderRecibeOferta.oferta === false){
+            error = "No se recibio oferta"
+        }
+        callback(error, koderRecibeOferta)
+    }, 3500)    
+}
+
+function inscribirse (koderAInscribirse, callback){
+    setTimeout( () => {
+        let error = null
+        koderAInscribirse.inscrito = true
+        if (koderAInscribirse.inscrito === false){
+            error = "No se inscribio"
+        }
+    }, 3500)
+}
+
+function asistirAClases (koderAsiste, callback){
+    setTimeout( () => {
+        let erorr = null
+        koderAsiste.asistencia = true
+        if (koderAsiste.asitencia === false){
+            error = "No asiste"
+        }    
+    }, 3500)
+}
