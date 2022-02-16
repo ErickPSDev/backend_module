@@ -124,10 +124,12 @@ construir (muro)
 */
 //           -         ASYNC Y AWAIT            -
 
+//SIEMPRE Y CUANDO SEA UNA PROMESA
+
 //async -> marca a una funcion como asincrona
 //await -> esperar la ejecución de una proemsa
 
-// PARA USAR UN AWAIT NECESITAMOS UNA FUNCIÓN A LA QUE MARCAREMOS COMO ASYNC
+// PARA USAR UN AWAIT NECESITAMOS UNA FUNCIÓN A LA QUE MARCAREMOS COMO ASYNC, SE TIENE QUE EJECUTAR LAS DOS
 
 async function main () {
     const muroConstruido = await construir (muro)
@@ -138,7 +140,7 @@ async function main () {
     console.log('Muro Pintado: ', muroPintado)
 }
 
-main() // main es asincrono te regresa una promesa por defecto
+main() // main es asincrono te rdegresa una promesa por efecto
 .then (() => {
     console.log('Todo chido')
 })
@@ -153,7 +155,7 @@ en promesas.
 then y catch
 luego asyn / await.
 
-2.- Consumir el modulo del FS de node que brinda con las
+2.- Consumir el modulo del FS de node que brinda con las promesas
 */
 
 // 3.- falta la asincrona

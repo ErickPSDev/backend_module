@@ -105,9 +105,10 @@ console.log('Koder inscrito: ',KoderInscrito )
 const koderAsistiendo = asistir (KoderInscrito)
 console.log('El Koder esta asistiendo: ', koderAsistiendo)
 */
-// Convertir sincrona en asincrona
 
-//Declaración de función
+// Convertir funcion sincrona en asincrona
+
+//Declaración de funciones
 function tomarEntrevista (koderAEntrevistar, callback) {
     setTimeout ( () => {
         let error = null
